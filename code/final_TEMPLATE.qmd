@@ -116,6 +116,9 @@ ggplot(data = sst_clean, # uses sst_clean data frame
 
 The 1s say that a bird occupied the nest box and the 0s say that a bird did not occupy the nest box. For example, if a 1 is in the sp column then a swift parrot occupied the nest box, but if a 0 is in the sp column then a swift parrot did not occupy the nest box.  
 
+## b. 
+
+The main difference is that Swift Parrots are the target species for which the nest boxes were installed, whereas Common Starlings and Tree Martins are competitor species that opportunistically occupy the boxes. The Swift Parrot is critically endangered and dependent on suitable nesting habitats, while the competitors are more adaptable and may outcompete the parrots for the artificial nesting sites.
 
 
 
