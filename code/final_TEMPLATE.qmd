@@ -268,4 +268,10 @@ pred_probs <- ggpredict( # calculating predicted probabilities
 print(pred_probs) # print the prediction table
 ```
 
+## k. 
+
+The results indicate that Swift Parrots are more likely to occupy nest boxes that are closer to the forest edge as seen in figure 1 in part h. According to the predictions calculated in part j, the probability of occupancy at 0 m from the forest edge was higher in both seasons approximately 48% in 2016 and 30% in 2019 compared to only 12% and 6% at 900 m. This suggests a strong negative relationship between distance from the forest edge and Swift Parrot occupancy probability. Biologically, the noticeable decline of occupancy at 0 m from 2016 and 2019 is likely due to the fact Swift Parrots rarely breed in the same location in successive years, leaving permanently deployed nest boxes available for non target species (Stojanovic et al. (2021). Additionally, the relationship between distance from the forest edge and probability of Swift Parrots occupying a nest box is likely because Swift Parrots naturally nest near forest edges, while other species occupy nest boxes far from the forest edges. 
+
+
+
 
