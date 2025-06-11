@@ -124,6 +124,42 @@ The main difference is that Swift Parrots are the target species for which the n
 
 The two seasons in the study are the 2018–2019 and 2019–2020 breeding seasons. They differ in that Swift Parrots were present in the study area during 2018–2019 but absent in 2019–2020, allowing the authors to compare nest box use with and without the presence of the target species.
 
+## d. 
+
+```{r}
+#| echo: false
+#| output: false
+nest_boxes_clean <- nest_boxes |> # creating new clean object from "nest_boxes"
+  clean_names() |> # cleaning column names
+  mutate( # modify columns
+    season = as.factor(season), # convert "season" to a factor
+    edge_distance = as.numeric(as.character(edge_distance)), # convert "edge_distance" to numeric
+    sp = as.numeric(as.character(sp))) |> # convert "sp" to numeric
+  select(season, edge_distance, sp) # selecting only season,edge_distance and sp
+
+slice_sample(nest_boxes_clean, n = 10) # randomly sample 10 rows from "nest_boxes_clean"
+str(nest_boxes_clean) # display the structure of "nest_boxes_clean"
+```
+
+```{r}
+#| echo: false
+model_table <- data.frame( # creating new data frame called "model_table"
+  "Model number" = 1:4, # column 1 models numbers from 1 to 4
+  Season = c("", "X", "X", ""), # column 2 indicates which models include (x) "season"   
+  "Distance to forest edge" = c("", "X", "", "X"), # column 3 indicates which models include (x) "edge_distance"
+  "Model description" = c(  # column 4 describes each model
+    "no predictors (null model)", # model 1 intercept only (null)
+    "includes both season and distance (saturated model)", # model 2 saturated
+    "season", # model 3 season
+    "distance"), # model 4 edge_distance
+  check.names = FALSE) # prevent from changing column names
+
+kable(model_table, align = "c") # format table
+```
+
+
+
+
 
 
 
