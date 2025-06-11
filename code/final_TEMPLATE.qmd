@@ -211,5 +211,52 @@ AICc(model1,
 
 The best model that predicts swift parrot nest box occupancy includes season and edge distance as determined by Akaike’s Information Criterion (AIC).
 
+## h. 
+
+```{r}
+mod_nest <- ggpredict(model2, # generating predicted probabilities and confidence intervals from "model2"
+  terms = c("edge_distance [all]", "season"))|> # full range of "edge_distance" for each season
+  rename(season = group) # renaming "group" column to "season"
+
+ggplot(nest_boxes_clean, # making plot from "nest_boxes_clean"
+       aes(x = edge_distance, # x-axis
+           y = sp, # y-axis
+           color = season)) + # color by season
+  geom_point(alpha = 0.4, # transparent data points
+             size = 2) + # data point size
+  geom_ribbon(data = mod_nest, # adding shaded confidence interval ribbons
+              aes(x = x, # x-values
+                  ymin = conf.low, # lower confidence interval bounds
+                  ymax = conf.high, # upper confidence interval bounds
+                  fill = season), # fill color by season
+              inherit.aes = FALSE, # do not inherit global aesthetics 
+              alpha = 0.3, # transparent for ribbons
+              color = NA) + # removing border around ribbons
+  geom_line(data = mod_nest, # adding predicted probability lines
+            aes(x = x, # x-value
+                y = predicted, # predicted probability from model
+                color = season), # line color by season
+            inherit.aes = FALSE, # do not inherit global aesthetics 
+            size = 0.5) + # line thickness
+  scale_color_manual(values = c("2016" = "red", # coloring "2016" points and lines red
+                                "2019" = "blue")) + # coloring "2019" points and lines blue
+  scale_fill_manual(values = c("2016" = "red3", # coloring "2016" ribbon red
+                               "2019" = "blue3")) + # coloring "2019" ribbon blue
+  scale_y_continuous(labels = scales::label_percent(accuracy = 1), # y-axis labels as percentages with 1% accuracy
+                     limits = c(0, 1)) + # y-axis range 0 to 1 (0% to 100%)
+  labs(x = "Distance to Forest Edge (m)", # label x-axis
+       y = "Probability of Swift Parrot Box Occupancy (%)", # label y-axis
+       color = "Season", # legend title for color
+       fill = "Season", # legend title for color
+       title = "Likelihood of Swift Parrot Occupying a Nest Box by Distances of Forests Edge and Season") + # figure title
+  theme_minimal() + # theme
+  theme(panel.grid = element_blank(), # remove grid lines
+        axis.line = element_line(color = "black")) # add axis lines 
+```
+
+## i. 
+
+Figure 1. Prediction and 95% confidence intervals from the best models of Swift Parrot box occupancy as a function of distance to forest edge and season. The lines represent predicted probabilities of Swift Parrot box nest occupancy, while the shaded ribbons indicate the 95% confidence intervals. Colored points show observed data, with red and blue representing different seasons. Data and interpretation adapted from Stojanovic et al. (2021). "Do nest boxes breed the target species or its competitors? A case study of a critically endangered bird." (https://doi.org/10.1111/rec.13319).
+
 
 
