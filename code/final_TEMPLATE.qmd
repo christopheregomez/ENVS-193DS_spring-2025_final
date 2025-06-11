@@ -272,6 +272,14 @@ print(pred_probs) # print the prediction table
 
 The results indicate that Swift Parrots are more likely to occupy nest boxes that are closer to the forest edge as seen in figure 1 in part h. According to the predictions calculated in part j, the probability of occupancy at 0 m from the forest edge was higher in both seasons approximately 48% in 2016 and 30% in 2019 compared to only 12% and 6% at 900 m. This suggests a strong negative relationship between distance from the forest edge and Swift Parrot occupancy probability. Biologically, the noticeable decline of occupancy at 0 m from 2016 and 2019 is likely due to the fact Swift Parrots rarely breed in the same location in successive years, leaving permanently deployed nest boxes available for non target species (Stojanovic et al. (2021). Additionally, the relationship between distance from the forest edge and probability of Swift Parrots occupying a nest box is likely because Swift Parrots naturally nest near forest edges, while other species occupy nest boxes far from the forest edges. 
 
+# Problem 4. Affective and exploratory visualizations
+
+## a. 
+
+My visualization from homework 2 was a scatter plot with different points representing steps recorded at work, colored by type of work shift with two lines connecting the points. My visualization from homework 3 was a jitter plot grouped into 2 plots based on work shift type with each data point representing total steps in a worked shift. It also included an average for both groups with 95% CI. Between all my visualizations I noticed I represented each data entry as a data point and color coded by type of work shift. I noticed I took more mean steps during a morning shift compared to all other shift types. I also noticed I had more outdoor helm hours during my morning shifts compared to my other shifts which likely contributed to me taking more mean steps during morning shifts. In the early stages of my visualization it was difficult to see a difference between my step counts likely because I did not have enough data. However, the difference became more apparent in my final visualization since I had enough data points to express a difference in means. I was given feedback on changing my data point shapes to make them easier to see. I was also given the suggestion to color each group based on colors in the day for example, orange for a morning shift to depict the sunrise, and blue or purple to depict the afternoon or night to represent my other shifts. I decided to keep both suggestions since I agreed with making my data points more visible and I thought it was a cool idea to express the type of shift by the color of the time of day. 
+
+## b. 
+
 
 
 
