@@ -81,7 +81,34 @@ slice_sample(sst_clean, n = 5) # randomly displays 5 rows from "sst_clean"
 str(sst_clean) # compact summary of the structure of "sst_clean"
 ```
 
+## b. 
 
+```{r}
+ggplot(data = sst_clean, # uses sst_clean data frame
+       aes(x = month, # makes x-axis
+           y = mean_monthly_sst, # makes y-axis
+           color = as.numeric(as.character(year)), # allows scale color gradient to work with a factor 
+           group = year)) + # groups points by year
+  geom_point() + # adds data points
+  geom_line() + # adds a line connecting the years
+  scale_color_gradient( # orders years from lightest to darkest in order from oldest to recent 
+    low = "chartreuse", # year 2018
+    high = "darkgreen", # year 2023
+    name = "Year", # legend title
+    breaks = 2018:2023, # ensures all years are shown properly in the legend
+    labels = 2018:2023, # ensures all years are labeled properly in the legend
+    guide = guide_colorbar(reverse = TRUE)) + # reverses the legend 2018 at top, 2023 at bottom
+  labs( # labels
+    x = "Month", # x-axis label
+    y = "Mean monthly sea surface temperature (°C)", # y-axis label
+    color = "Year") + # color coded by year 
+  guides(color = guide_legend(override.aes = list(shape = 16))) + # makes legend data point shape a closed circle with a horizontal line 
+  theme_bw() + # theme
+  theme(panel.grid = element_blank(), # removes grid 
+        legend.position = c(0.1, 0.75), # puts legend inside panel on top left 
+        axis.title.x = element_text(size = 13), # makes x-axis title font bigger
+        axis.title.y.left = element_text(size = 13)) # makes y-axis font bigger
+```
 
 
 
