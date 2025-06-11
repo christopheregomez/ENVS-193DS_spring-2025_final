@@ -1,0 +1,35 @@
+---
+title: "final_TEMPLATE"
+date: 2025-06-07 
+author: Chris Gomez
+format: html
+format: html
+toc: true
+execute: 
+  warning: false
+  message: false
+link: https://github.com/christopheregomez/ENVS-193DS_spring-2025_final.git 
+---
+
+# Setup
+```{r}
+library(tidyverse)
+library(here)
+library(gt)
+library(janitor)
+library(knitr)
+library(rmarkdown)
+library(lubridate)
+library(dplyr)
+library(tibble)
+library(DHARMa)
+library(MuMIn)
+library(broom)
+library(ggeffects)
+library(scales)
+
+sst <- read_csv(
+  here("data", "SST_update2023.csv")) # creating object for sst data
+nest_boxes <- read_csv(
+  here("data", "occdist.csv")) # creating object for nest data 
+```
