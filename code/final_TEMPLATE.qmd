@@ -44,6 +44,11 @@ In part 1, they used a Pearson's r correlation test. In part 2, they used a one-
 
 I believe their Pearson's r test should have included both a correlation coefficient and a 95% confidence interval. The addition of the correlation coefficient would be useful because it helps the reader understand and quantify the relationship between the two variables by telling the strength and direction of a linear relationship. The 95% CI would be useful because it provides a range of plausible values for the true correlation coefficient for example, a narrow CI indicates a precise estimate while a wide CI suggests uncertainty. This is important because it indicates how precisely the sample correlation coefficient estimates the variables correlation, and it can be used to assess the statistical significance of the correlation. Since the p-value in this example is 0.03 this confirms the results are statistically significant at the 0.05 level. Even though the correlation is statistically significant, the confidence interval could indicate that the true strength of the relationship is still somewhat uncertain. 
 
+## c. 
+
+We found a statistically significant positive correlation between distance from headwater (km) and annual total nitrogen load (kg year⁻¹), indicating that nitrogen load tends to change downstream. We rejected the null hypothesis of no correlation (Pearson’s correlation, r(test statistic) = correlation coefficient, p = 0.03, α = significance level). This suggests that nitrogen levels are different downstream, 95% CI: [lower bound, upper bound] kg year⁻¹.
+
+We found a significant difference (η² = effect size) in mean nitrogen load between urban land (n = sample size), atmospheric deposition (n = sample size), fertilizer (n = sample size), wastewater treatment (n = sample size), and grasslands (n = sample size) (One-way ANOVA, F(degrees of freedom) = F-value, p = 0.02, α = significance level). On average, nitrogen load (kg year⁻¹) from urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands were all different, 95% CI: [lower bound, upper bound] kg year⁻¹. 
 
 
 
