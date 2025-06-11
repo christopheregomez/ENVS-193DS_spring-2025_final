@@ -120,6 +120,9 @@ The 1s say that a bird occupied the nest box and the 0s say that a bird did not 
 
 The main difference is that Swift Parrots are the target species for which the nest boxes were installed, whereas Common Starlings and Tree Martins are competitor species that opportunistically occupy the boxes. The Swift Parrot is critically endangered and dependent on suitable nesting habitats, while the competitors are more adaptable and may outcompete the parrots for the artificial nesting sites.
 
+## c. 
+
+The two seasons in the study are the 2018–2019 and 2019–2020 breeding seasons. They differ in that Swift Parrots were present in the study area during 2018–2019 but absent in 2019–2020, allowing the authors to compare nest box use with and without the presence of the target species.
 
 
 
