@@ -157,6 +157,29 @@ model_table <- data.frame( # creating new data frame called "model_table"
 kable(model_table, align = "c") # format table
 ```
 
+## e. 
+
+```{r}
+#| echo: false
+#| output: false
+
+model1 <- glm(sp ~ 1, # model 1: null 
+                data = nest_boxes_clean, # data from nest_box_clean
+                family = "binomial") # binomial distribution
+
+model2 <- glm(sp ~ season + edge_distance, # model 2: saturated 
+                data = nest_boxes_clean, # data from nest_box_clean
+                family = "binomial") # binomial distribution
+
+model3 <- glm(sp ~ season, # model 3: season
+                data = nest_boxes_clean, # data from nest_box_clean
+                family = "binomial") # binomial distribution
+
+model4 <- glm(sp ~ edge_distance, # model 4: edge_distance
+                data = nest_boxes_clean, # data from nest_box_clean
+                family = "binomial") # binomial distribution
+```
+
 
 
 
