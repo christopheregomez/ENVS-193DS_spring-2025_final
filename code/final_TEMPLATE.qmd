@@ -40,6 +40,15 @@ nest_boxes <- read_csv(
 
 In part 1, they used a Pearson's r correlation test. In part 2, they used a one-way ANOVA test.
 
+## b.
+
+I believe their Pearson's r test should have included both a correlation coefficient and a 95% confidence interval. The addition of the correlation coefficient would be useful because it helps the reader understand and quantify the relationship between the two variables by telling the strength and direction of a linear relationship. The 95% CI would be useful because it provides a range of plausible values for the true correlation coefficient for example, a narrow CI indicates a precise estimate while a wide CI suggests uncertainty. This is important because it indicates how precisely the sample correlation coefficient estimates the variables correlation, and it can be used to assess the statistical significance of the correlation. Since the p-value in this example is 0.03 this confirms the results are statistically significant at the 0.05 level. Even though the correlation is statistically significant, the confidence interval could indicate that the true strength of the relationship is still somewhat uncertain. 
+
+
+
+
+
+
 
 
 
