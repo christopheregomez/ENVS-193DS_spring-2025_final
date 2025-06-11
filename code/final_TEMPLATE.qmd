@@ -50,6 +50,36 @@ We found a statistically significant positive correlation between distance from 
 
 We found a significant difference (η² = effect size) in mean nitrogen load between urban land (n = sample size), atmospheric deposition (n = sample size), fertilizer (n = sample size), wastewater treatment (n = sample size), and grasslands (n = sample size) (One-way ANOVA, F(degrees of freedom) = F-value, p = 0.02, α = significance level). On average, nitrogen load (kg year⁻¹) from urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands were all different, 95% CI: [lower bound, upper bound] kg year⁻¹. 
 
+# Problem 2. Data Visualization 
+
+## a. 
+
+```{r}
+sst_clean <- sst |> # creating new clean object from "sst"
+  clean_names() |>  # clean column names
+  mutate( # changes to data frame
+    year = year(date), # isolates year from date
+    month = month(date), # isolates month from date
+    month = month.abb[month]) |> # renames month number to month name
+  group_by(year, # group by year
+           month) |> # group by month
+  summarise(temp = mean(temp, # takes mean temp by each month per year
+                        na.rm = TRUE), # convert character month to ordered factor
+            .groups = "drop") |> # ungroups the data post-summary
+  select(year, # isolates year
+         month, # isolates month
+         mean_monthly_sst = temp) |> # isolates temp and renames to "mean_monthly_sst"
+  filter(year %in% c(2018:2023)) |> # filter years from 2018-2023
+  mutate( # changes data frame
+    year = factor(year, # converts year to categorical variable
+                  levels = as.character(2018:2023)), # orders years
+    month = factor(month, # converts month to categorical variable
+                   levels = month.abb, # sets Jan–Dec order
+                   ordered = TRUE)) # makes it an ordered factor 
+
+slice_sample(sst_clean, n = 5) # randomly displays 5 rows from "sst_clean"
+str(sst_clean) # compact summary of the structure of "sst_clean"
+```
 
 
 
