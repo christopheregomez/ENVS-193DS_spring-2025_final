@@ -198,3 +198,18 @@ plot( # plotting edge_distance residuals
   simulateResiduals(model4)) # simulating residuals 
 ```
  
+
+## g. 
+
+```{r}
+AICc(model1,
+     model2, # best model: season and edge distance
+     model3,
+     model4) |> 
+   arrange(AICc) # arranging output in descending order of AIC
+```
+
+The best model that predicts swift parrot nest box occupancy includes season and edge distance as determined by Akaike’s Information Criterion (AIC).
+
+
+
