@@ -33,3 +33,17 @@ sst <- read_csv(
 nest_boxes <- read_csv(
   here("data", "occdist.csv")) # creating object for nest data 
 ```
+
+# Problem 1. Research writing 
+
+## a. 
+
+In part 1, they used a Pearson's r correlation test. In part 2, they used a one-way ANOVA test.
+
+
+
+
+
+
+
+
