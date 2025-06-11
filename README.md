@@ -35,7 +35,7 @@ File structure:
 ```
 
 ## Rendered output
-The rendered template is here 
+The rendered template is [here](https://christopheregomez.github.io/ENVS-193DS_spring-2025_final/code/final_TEMPLATE.html)
 
 
 
