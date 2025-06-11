@@ -157,7 +157,7 @@ model_table <- data.frame( # creating new data frame called "model_table"
 kable(model_table, align = "c") # format table
 ```
 
-## e. 
+## e.
 
 ```{r}
 #| echo: false
@@ -180,11 +180,21 @@ model4 <- glm(sp ~ edge_distance, # model 4: edge_distance
                 family = "binomial") # binomial distribution
 ```
 
+## f. 
 
+```{r}
+#| warning: false
 
+plot( # plotting null residuals
+  simulateResiduals(model1)) # simulating residuals 
 
+plot( # plotting saturated residuals
+  simulateResiduals(model2)) # simulating residuals 
 
+plot( # plotting season residuals
+  simulateResiduals(model3)) # simulating residuals 
 
-
-
-
+plot( # plotting edge_distance residuals
+  simulateResiduals(model4)) # simulating residuals 
+```
+ 
