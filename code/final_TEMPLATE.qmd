@@ -3,7 +3,6 @@ title: "final_TEMPLATE"
 date: 2025-06-07 
 author: Chris Gomez
 format: html
-format: html
 toc: true
 execute: 
   warning: false
