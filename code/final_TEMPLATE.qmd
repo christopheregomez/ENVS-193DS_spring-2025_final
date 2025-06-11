@@ -258,5 +258,14 @@ ggplot(nest_boxes_clean, # making plot from "nest_boxes_clean"
 
 Figure 1. Prediction and 95% confidence intervals from the best models of Swift Parrot box occupancy as a function of distance to forest edge and season. The lines represent predicted probabilities of Swift Parrot box nest occupancy, while the shaded ribbons indicate the 95% confidence intervals. Colored points show observed data, with red and blue representing different seasons. Data and interpretation adapted from Stojanovic et al. (2021). "Do nest boxes breed the target species or its competitors? A case study of a critically endangered bird." (https://doi.org/10.1111/rec.13319).
 
+## j. 
+
+```{r}
+pred_probs <- ggpredict( # calculating predicted probabilities
+  model2, # using model 2
+  terms = c("edge_distance [0,900]", "season")) # specifying edge distances and season
+
+print(pred_probs) # print the prediction table
+```
 
 
